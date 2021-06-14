@@ -21,7 +21,8 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 export class AppBreadcrumbComponent implements OnInit {
   @Input() layout: any;
-  pageInfo: Data;
+  pageInfo: Data | undefined;
+  
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
