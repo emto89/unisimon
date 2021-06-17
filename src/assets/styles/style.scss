@@ -59,6 +59,18 @@ File: scss
   @include angular-material-theme($dark-theme);
 }
 
+.footer {
+  font-family: "Assistant", sans-serif;
+  font-size: 12px;
+  height: 18px;
+  color: #444444;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.text-blue {
+  color: #0c6cb1;
+}
 $custom-typography: mat-typography-config(
   $font-family: "Roboto Condensed",
 );
