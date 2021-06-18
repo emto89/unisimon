@@ -31,6 +31,8 @@ File: scss
 @import "responsive";
 @import "rtl";
 
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
 // Red Theme
 
 .danger {
@@ -53,13 +55,21 @@ File: scss
 }
 
 // Dark Theme
+.bg-white {
+  background-color: $white;
+}
+
+.space-content {
+  padding-right: 10% !important;
+  padding-left: 10% !important;
+}
 
 .dark {
   @import "colors/dark";
   @include angular-material-theme($dark-theme);
 }
 
-.footer {
+.text-footer {
   font-family: "Assistant", sans-serif;
   font-size: 12px;
   height: 18px;
@@ -74,4 +84,8 @@ File: scss
 $custom-typography: mat-typography-config(
   $font-family: "Roboto Condensed",
 );
+
+.background-dashboard {
+  background-image: url("../unisimon/images/foto-dashboard.jpg");
+}
 @include mat-core($custom-typography);

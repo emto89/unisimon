@@ -1,8 +1,7 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { DemoMaterialModule } from '../demo-material-module';
+import { Material } from '../material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IconsRoutes } from './mat-icon.routing';
@@ -13,11 +12,11 @@ import { MatIconComponent } from './mat-icon.component';
   imports: [
     CommonModule,
     RouterModule.forChild(IconsRoutes),
-    DemoMaterialModule,
+    Material,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  declarations: [MatIconComponent]
+  declarations: [MatIconComponent],
 })
 export class IconsModule {}

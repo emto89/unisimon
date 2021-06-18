@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { AppRoutes } from './app.routing';
+import { AppRoutes } from './app.routing.module';
 import { AppComponent } from './app.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -13,7 +13,7 @@ import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { AppBreadcrumbComponent } from './layouts/full/breadcrumb/breadcrumb.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DemoMaterialModule } from './demo-material-module';
+import { Material } from './material';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
@@ -23,41 +23,43 @@ import { AuthGuard } from './auth.guard';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-    suppressScrollX: true,
-    wheelSpeed: 2,
-    wheelPropagation: true
+  suppressScrollX: true,
+  wheelSpeed: 2,
+  wheelPropagation: true,
 };
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FullComponent,
-        AppHeaderComponent,
-        SpinnerComponent,
-        AppSidebarComponent,
-        LoginComponent,
-        AppBreadcrumbComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        DemoMaterialModule,
-        FormsModule,
-        FlexLayoutModule,
-        PerfectScrollbarModule,
-        HttpClientModule,
-        SharedModule,
-        RouterModule.forRoot(AppRoutes)
-    ],
-    providers: [
-        AuthGuard,
-        {
-            provide: PERFECT_SCROLLBAR_CONFIG,
-            useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-        }
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    FullComponent,
+    AppHeaderComponent,
+    SpinnerComponent,
+    AppSidebarComponent,
+    LoginComponent,
+    AppBreadcrumbComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    Material,
+    FormsModule,
+    FlexLayoutModule,
+    PerfectScrollbarModule,
+    HttpClientModule,
+    SharedModule,
+    RouterModule.forRoot(AppRoutes),
+    NgbModule,
+  ],
+  providers: [
+    AuthGuard,
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
