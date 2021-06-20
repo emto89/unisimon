@@ -1,0 +1,230 @@
+<div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
+  <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card class="card">
+      <mat-card-content class="px-5">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+            <div>
+              <div class="d-flex">
+                <a class="my-auto"
+                  ><img src="assets/unisimon/icons/ico-back.svg"
+                /></a>
+                <h2 class="page-title text-green ml-4 my-auto">
+                  Contactos DICO: Departamento de Internacionalización y
+                  Cooperación
+                </h2>
+              </div>
+
+              <div class="mx-5 my-3">
+                <div class="row">
+                  <div class="col-lg-6 p-0">
+                    <mat-card class="card-info card-border">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <h3 class="text-green my-2 title-card">
+                              Barranquilla
+                            </h3>
+                          </div>
+                        </mat-card-title>
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0" style="font-size: 16px">
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-fono.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            {{ baqPhone }}
+                          </p>
+                        </div>
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-movil.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            {{ baqMobile }}
+                          </p>
+                        </div>
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-mail.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            <a href="mailto:mail">
+                              {{ baqMail }}
+                            </a>
+                          </p>
+                        </div>
+
+                        <div class="d-flex align-items-center py-4">
+                          <mat-divider class="w-75"></mat-divider>
+                        </div>
+
+                        <div>
+                          <h3 class="subtitle my-2">
+                            Otros contactos en Barranquilla
+                          </h3>
+                          <div
+                            class="my-4"
+                            *ngFor="let contact of personalBaq; let i = index"
+                          >
+                            <div class="d-flex mt-3">
+                              <a
+                                ><img
+                                  src="assets/unisimon/icons/ico-person-01.svg"
+                              /></a>
+                              <p
+                                class="contact-info mx-3 my-0 font-weight-bold"
+                              >
+                                {{ contact.name }}
+                              </p>
+                            </div>
+                            <div>
+                              <p class="contact-info description my-0">
+                                {{ contact.title }}
+                              </p>
+                              <p class="contact-info description my-0">
+                                <a href="mailto:contact.email">
+                                  {{ contact.email }}
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center py-4">
+                          <mat-divider class="w-75"></mat-divider>
+                        </div>
+
+                        <div>
+                          <div class="d-flex my-2">
+                            <a
+                              ><img src="assets/unisimon/icons/ico-grupo.svg"
+                            /></a>
+                            <h3 class="mx-3 subtitle">
+                              Docentes de apoyo en Ciencias de la Salud
+                            </h3>
+                          </div>
+
+                          <div
+                            class="my-4"
+                            *ngFor="let contact of teachers; let i = index"
+                          >
+                            <div class="d-flex mt-3">
+                              <a
+                                ><img
+                                  src="assets/unisimon/icons/ico-person-02.svg"
+                              /></a>
+                              <p
+                                class="
+                                  contact-info
+                                  mx-3
+                                  my-0
+                                  font-weight-bold
+                                  text-uppercase
+                                "
+                              >
+                                {{ contact.name }}
+                              </p>
+                            </div>
+                            <div>
+                              <p class="contact-info description my-0">
+                                {{ contact.title }}
+                              </p>
+                              <p class="contact-info description my-0">
+                                <a href="mailto:contact.email">
+                                  {{ contact.email }}
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
+
+                  <div class="col-lg-6 p-0">
+                    <mat-card class="card-info card-border">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <h3 class="text-green my-2 title-card">Cucúta</h3>
+                          </div>
+                        </mat-card-title>
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0" style="font-size: 16px">
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-fono.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            {{ cucutaPhone }}
+                          </p>
+                        </div>
+
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-movil.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            {{ cucutaMobile }}
+                          </p>
+                        </div>
+
+                        <div class="d-flex m-2">
+                          <a
+                            ><img src="assets/unisimon/icons/ico-mail.svg"
+                          /></a>
+                          <p class="contact-info mx-3">
+                            <a href="mailto:mail">
+                              {{ cucutaMail }}
+                            </a>
+                          </p>
+                        </div>
+                        <div class="d-flex py-4 align-items-center">
+                          <mat-divider class="w-75"></mat-divider>
+                        </div>
+                        <div class="d-block d-inline">
+                          <h3 class="subtitle my-2">
+                            Otros contactos en Cucutá
+                          </h3>
+                        </div>
+
+                        <div
+                          class="my-4"
+                          *ngFor="let contact of personalCucuta; let i = index"
+                        >
+                          <div class="d-flex mt-3">
+                            <a
+                              ><img
+                                src="assets/unisimon/icons/ico-person-01.svg"
+                            /></a>
+                            <p class="contact-info mx-3 my-0 font-weight-bold">
+                              {{ contact.name }}
+                            </p>
+                          </div>
+                          <div>
+                            <p class="contact-info description my-0">
+                              {{ contact.title }}
+                            </p>
+                            <p class="contact-info description my-0">
+                              <a href="mailto:contact.email">
+                                {{ contact.email }}
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

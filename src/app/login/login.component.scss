@@ -8,6 +8,22 @@
   display: flex;
 }
 
+.image-container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.image-container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(255, 255, 255); /* Fallback color */
+  background: rgba(255, 255, 255, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+
 ::ng-deep .mat-form-field-wrapper {
   padding-bottom: 0 !important;
 }
@@ -59,4 +75,61 @@
   padding: 5%;
   border-radius: 25px;
   padding-top: 20%;
+}
+
+main {
+  background-color: #ffff;
+}
+
+.login-block {
+  float: left;
+  width: 100%;
+  // padding : 120px 0;
+}
+
+.brand {
+  max-width: 100%;
+}
+.banner-sec {
+  background-image: url("../../assets/unisimon/images/foto-portada.jpg");
+  background-color: #e0dfdf;
+  background-size: cover;
+  min-height: 500px;
+  border-radius: 0 10px 10px 0;
+  padding: 0;
+  @media (max-width: 990px) {
+    display: none !important;
+  }
+}
+
+.container {
+  @media (max-width: 425px) {
+    padding: 30px;
+  }
+}
+.login-sec {
+  padding: 50px 30px;
+  position: relative;
+
+  .copy-text {
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .btn-login {
+    background: #3970df;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .text-image {
+    margin-top: 25rem;
+    color: #ff5c5c;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: end;
+  }
 }

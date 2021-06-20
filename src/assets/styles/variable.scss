@@ -7,13 +7,13 @@ File: scss
 // font family, also paste this import into styles.css file.
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
-$bodyfont: "Roboto Condensed", sans-serif;
+$bodyfont: "Assistant", sans-serif;
 $headingfont: "Roboto Condensed", sans-serif;
 @import "~@angular/material/theming";
 
 /*Material Theme Colors*/
 
-$primary: mat-palette($mat-blue, 600);
+$primary: mat-palette($mat-blue, 800);
 $accent: mat-palette($mat-indigo, 500);
 $warn: mat-palette($mat-pink, 500);
 $theme: mat-light-theme($primary, $accent, $warn);
@@ -39,8 +39,8 @@ $sidebar-icons: #99abb4;
 
 $font-16: 16px;
 
-$light-text: #a6b7bf;
-$themecolor: #1e88e5;
+$light-text: #444444;
+$themecolor: #0c6cb1;
 $themecolor-alt: #26c6da;
 $themecolor-dark: #028ee1;
 
@@ -48,11 +48,11 @@ $themecolor-dark: #028ee1;
 $danger: #fc4b6c;
 $success: #26c6da;
 $warning: #ffb22b;
-$primary: #277834;
+$primary: #24732b;
 $info: #1e88e5;
 $inverse: #2f3d4a;
 $muted: #99abb4;
-$dark: #263238;
+$dark: #444444;
 $light: #f2f4f8;
 $extra-light: #ebf3f5;
 $secondary: #727b84;

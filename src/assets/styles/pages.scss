@@ -31,7 +31,7 @@ File: scss
 html .page-wrapper {
   height: calc(100vh - 64px);
   .page-content {
-    padding: 15px;
+    // padding: 15px;
   }
 }
 
@@ -93,6 +93,10 @@ html .page-wrapper {
   &:hover {
     color: aqua;
   }
+}
+
+.select {
+  width: 295px;
 }
 /*******************
  Mail page
@@ -219,6 +223,31 @@ html .page-wrapper {
 .chat-date {
   font-size: 12px;
   color: $muted;
+}
+
+/*******************
+FAQ
+******************/
+
+.card-info {
+  width: 276px;
+  height: 280px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 15px;
+  opacity: 1;
+}
+
+.title-card {
+  font-size: 20px !important;
+  text-align: left;
+  width: 164px;
+  height: 49px;
+}
+
+.subtitle-card {
+  font-weight: bold;
+  font-size: 18px !important;
 }
 
 /*******************
@@ -386,6 +415,10 @@ Smart table
 /**********************
 Overall Responsive table
 ***********************/
+.space-content {
+  padding-right: 10% !important;
+  padding-left: 10% !important;
+}
 
 .responsive-table {
   display: flex;

@@ -1,0 +1,373 @@
+<div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
+  <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card class="card">
+      <mat-card-content class="px-5">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+            <div>
+              <div class="d-flex">
+                <a class="my-auto"
+                  ><img src="assets/unisimon/icons/ico-back.svg"
+                /></a>
+                <h2 class="page-title text-green ml-4">Inscripción</h2>
+              </div>
+              <p class="mx-5 font-medium second-font my-0">
+                Complete la siguiente información; tenga en cuenta que todos los
+                campos son obligatorios.
+              </p>
+
+              <div class="m-5">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="getForm" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Datos personales
+                          </h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Nombre</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="name"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Apellidos</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="lastname"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Documento de identidad</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="typeId"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Número</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="number"
+                              formControlName="id"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="getForm" class="mb-3">
+                          <div>
+                            <button mat-icon-button class="m-r-5 py-4">
+                              <img
+                                src="assets/images/users/1.jpg"
+                                alt="user"
+                                class="profile-pic"
+                              />
+                            </button>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Foto</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="photo"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Nacionalidad</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="nationality"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="residence" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Residencia
+                          </h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Dirección</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="address"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Ciudad</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="city"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >País</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="country"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="contact" class="mb-4">
+                          <h4 class="text-gray form-control-title">Contacto</h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Télefono Celular</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="mobile"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Teléfono fijo</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="phone"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Correo electrónico</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="email"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="emergencyContact" class="mb-4">
+                          <h4 class="text-gray form-control-title">
+                            Contacto de emergencia
+                          </h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Nombre completo</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="fullName"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Teléfono celular</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="mobile"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Dirección de contacto</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="contactAddress"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="emergencyContact" class="mb-4">
+                          <h4 class="text-gray form-control-title">--</h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Parentezco</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="relationship"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Correo electrónico</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                second-font
+                              "
+                              type="text"
+                              formControlName="email"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <mat-card class="card-info">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <a
+                              ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                            /></a>
+                            <h3 class="text-green my-2 title-card">
+                              El proceso de postulación ha iniciado
+                            </h3>
+                          </div>
+                        </mat-card-title>
+                        <mat-card-subtitle
+                          class="subtitle-card mt-5 font-weight-normal"
+                          >Sigue estos pasos que serán de guía antes, durante y
+                          después de la movilidad. <br /><br />Carga y
+                          actualízalos los documentos y monitorea tus progresos
+                          para cumplir con los plazos por
+                          convocatoria.</mat-card-subtitle
+                        >
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0">
+                        <p class="font-medium">Recomendaciones</p>
+                        <mat-list>
+                          <mat-list-item class="text-primary px-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Escanear documentos
+                          </mat-list-item>
+                          <mat-list-item class="text-primary px-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Comprimir archivos
+                          </mat-list-item>
+                          <!-- review -->
+                          <mat-list-item class="text-primary px-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Pide ayuda
+                          </mat-list-item>
+                        </mat-list>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

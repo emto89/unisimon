@@ -23,7 +23,7 @@ export const AppRoutes: Routes = [
           ),
       },
       {
-        path: 'starter',
+        path: 'dashboard',
         loadChildren: () =>
           import('./starter/starter.module').then((m) => m.StarterModule),
       },
@@ -36,46 +36,6 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'signup',
-    component: LoginComponent,
-  },
-  {
-    path: 'dashboard',
-    component: LoginComponent,
-  },
-  {
-    path: 'authorization',
-    component: LoginComponent,
-  },
-  {
-    path: 'frequentlyQuestions',
-    component: LoginComponent,
-  },
-  {
-    path: 'contacts',
-    component: LoginComponent,
-  },
-  {
-    path: 'glossary',
-    component: LoginComponent,
-  },
-  {
-    path: 'patners',
-    component: LoginComponent,
-  },
-  {
-    path: 'covenants',
-    component: LoginComponent,
-  },
-  {
-    path: 'nominations',
-    component: LoginComponent,
-  },
-  {
-    path: 'applications',
     component: LoginComponent,
   },
 ];

@@ -1,0 +1,86 @@
+<div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
+  <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card class="card">
+      <mat-card-content class="px-5">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+            <div>
+              <div class="d-flex">
+                <a class="my-auto"
+                  ><img src="assets/unisimon/icons/ico-back.svg"
+                /></a>
+                <h2 class="page-title text-green ml-4 my-auto">
+                  Preguntas frecuentes
+                </h2>
+                <h2
+                  class="page-title text-primary mx-5 text-capitalize my-auto"
+                >
+                  Glosario de términos
+                </h2>
+              </div>
+
+              <div class="m-5">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <mat-accordion>
+                      <mat-expansion-panel
+                        *ngFor="let item of itemList; let i = index"
+                        [hideToggle]="true"
+                        [class.selected]="item.selected"
+                      >
+                        <mat-expansion-panel-header>
+                          <mat-panel-title class="justify-content-between">
+                            <p
+                              mat-panel-title
+                              class="m-0 text-primary second-font title"
+                            >
+                              {{ item.header }}
+                            </p>
+                            <a
+                              ><img src="assets/unisimon/icons/ico-down-on.svg"
+                            /></a>
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p class="text-gray second-font">
+                          {{ item.content }}
+                        </p>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-4">
+                    <mat-card class="card-info">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <a
+                              ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                            /></a>
+                            <h3 class="text-green my-2 title-card">
+                              Donec aliquet dui vel placerat bibendum.
+                            </h3>
+                          </div>
+                        </mat-card-title>
+                        <mat-card-subtitle class="subtitle-card mt-4"
+                          >Sed scelerisque enim:</mat-card-subtitle
+                        >
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0">
+                        <p class="font-medium">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit ut viverra enim risus, ut varius ipsum dignissim
+                          .
+                        </p></mat-card-content
+                      >
+                    </mat-card>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
