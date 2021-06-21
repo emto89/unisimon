@@ -33,7 +33,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="name"
@@ -47,7 +47,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="lastname"
@@ -61,7 +61,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="typeId"
@@ -75,7 +75,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="number"
                               formControlName="id"
@@ -85,24 +85,25 @@
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="getForm" class="mb-3">
-                          <div>
-                            <button mat-icon-button class="m-r-5 py-4">
-                              <img
-                                src="assets/images/users/1.jpg"
-                                alt="user"
-                                class="profile-pic"
-                              />
-                            </button>
+                          <div
+                            class="form-group text-center"
+                            style="padding: 42px"
+                          >
+                            <img
+                              src="assets/images/users/5.jpg"
+                              alt="Avatar"
+                              class="avatar"
+                            />
                           </div>
                           <div class="form-group">
                             <label class="form-control-label second-font"
-                              >Foto</label
+                              >Cargar foto</label
                             >
                             <input
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="photo"
@@ -116,7 +117,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="nationality"
@@ -140,7 +141,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="address"
@@ -154,7 +155,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="city"
@@ -168,7 +169,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="country"
@@ -187,7 +188,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="mobile"
@@ -201,7 +202,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="phone"
@@ -215,7 +216,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="email"
@@ -239,7 +240,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="fullName"
@@ -253,7 +254,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="mobile"
@@ -267,7 +268,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="contactAddress"
@@ -276,8 +277,11 @@
                         </form>
                       </div>
                       <div class="col-lg-6">
-                        <form [formGroup]="emergencyContact" class="mb-4">
-                          <h4 class="text-gray form-control-title">--</h4>
+                        <form
+                          [formGroup]="emergencyContact"
+                          class="mb-4"
+                          style="padding-top: 30px"
+                        >
                           <div class="form-group">
                             <label class="form-control-label second-font"
                               >Parentezco</label
@@ -286,7 +290,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="relationship"
@@ -300,7 +304,7 @@
                               id="input-name"
                               class="
                                 form-control form-control-alternative
-                                second-font
+                                input
                               "
                               type="text"
                               formControlName="email"
@@ -318,13 +322,13 @@
                             <a
                               ><img src="assets/unisimon/icons/ico-ayuda.svg"
                             /></a>
-                            <h3 class="text-green my-2 title-card">
+                            <h3 class="text-green my-2">
                               El proceso de postulación ha iniciado
                             </h3>
                           </div>
                         </mat-card-title>
                         <mat-card-subtitle
-                          class="subtitle-card mt-5 font-weight-normal"
+                          class="subtitle-card second-font font-medium"
                           >Sigue estos pasos que serán de guía antes, durante y
                           después de la movilidad. <br /><br />Carga y
                           actualízalos los documentos y monitorea tus progresos
@@ -336,14 +340,14 @@
                       <mat-card-content class="pt-0">
                         <p class="font-medium">Recomendaciones</p>
                         <mat-list>
-                          <mat-list-item class="text-primary px-0">
+                          <mat-list-item class="text-blue px-0">
                             <i
-                              class="fa fa-circle mr-2"
+                              class="fa fa-circle mr-2 my-0"
                               style="font-size: 12px"
                             ></i>
                             Escanear documentos
                           </mat-list-item>
-                          <mat-list-item class="text-primary px-0">
+                          <mat-list-item class="text-blue px-0 my-0">
                             <i
                               class="fa fa-circle mr-2"
                               style="font-size: 12px"
@@ -351,7 +355,7 @@
                             Comprimir archivos
                           </mat-list-item>
                           <!-- review -->
-                          <mat-list-item class="text-primary px-0">
+                          <mat-list-item class="text-blue px-0">
                             <i
                               class="fa fa-circle mr-2"
                               style="font-size: 12px"

@@ -10,14 +10,359 @@
                   ><img src="assets/unisimon/icons/ico-back.svg"
                 /></a>
                 <h2 class="page-title text-green ml-4">
-                  Convocatorias Disponibles
+                  Solicitud Programa de Movilidad
                 </h2>
               </div>
 
               <div class="m-5">
                 <div class="row">
-                  <div class="col-lg-6"></div>
-                  <div class="col-lg-6"></div>
+                  <div class="col-lg-8">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="movilidad" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Tipo de movilidad
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="type"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="economicStatus" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Población económica
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="economic_population"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="academyData" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Datos académicos
+                          </h4>
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Universidad</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="university"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="academyData" class="mb-3">
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Idiomas</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="languages"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="academyData" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Nivel de formación
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="education_level"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="academyData" class="mb-3">
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="other"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="studentData" class="mb-3">
+                          <h4 class="text-gray form-control-title">Facultad</h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="studentData_name"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="studentData" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Programa Académico
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="program_name"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="studentData" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Código estudiante
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="code"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="studentData" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Promedio acumulado
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="prom"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <form [formGroup]="economicStatus" class="mb-3">
+                          <h4 class="text-gray form-control-title">
+                            Ubicación
+                          </h4>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="location"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="economicStatus" class="mb-3">
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="city"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <h4 class="text-green">
+                        Programa de movilidad a solicitar
+                      </h4>
+                      <div class="col-lg-6 d-block">
+                        <h4 class="text-gray form-control-title">
+                          Carácter de la movilidad
+                        </h4>
+                        <form [formGroup]="programRequest" class="mb-3">
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="nature_mobility"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="name_mobility"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-6">
+                        <form [formGroup]="programRequest" class="mb-3">
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="others"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div>
+                        <form [formGroup]="programRequest" class="mb-3">
+                          <div class="form-group">
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="observations"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <mat-card class="card-info">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <a
+                              ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                            /></a>
+                            <h3 class="text-green my-2">
+                              El proceso de postulación ha iniciado
+                            </h3>
+                          </div>
+                        </mat-card-title>
+                        <mat-card-subtitle
+                          class="subtitle-card second-font font-medium"
+                          >Sigue estos pasos que serán de guía antes, durante y
+                          después de la movilidad. <br /><br />Carga y
+                          actualízalos los documentos y monitorea tus progresos
+                          para cumplir con los plazos por
+                          convocatoria.</mat-card-subtitle
+                        >
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0">
+                        <p class="font-medium">Recomendaciones</p>
+                        <mat-list>
+                          <mat-list-item class="text-blue px-0">
+                            <i
+                              class="fa fa-circle mr-2 my-0"
+                              style="font-size: 12px"
+                            ></i>
+                            Escanear documentos
+                          </mat-list-item>
+                          <mat-list-item class="text-blue px-0 my-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Comprimir archivos
+                          </mat-list-item>
+                          <!-- review -->
+                          <mat-list-item class="text-blue px-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Pide ayuda
+                          </mat-list-item>
+                        </mat-list>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
                 </div>
               </div>
             </div>

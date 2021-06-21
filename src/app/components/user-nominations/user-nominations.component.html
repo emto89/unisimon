@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
   <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-    <mat-card class="card">
+    <mat-card>
       <mat-card-content class="px-5">
         <div fxLayout="row" fxLayoutWrap="wrap">
           <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
@@ -14,9 +14,9 @@
 
               <div class="mx-5 my-3">
                 <div class="row d-block">
-                  <div>
-                    <mat-form-field class="select" appearance="outline">
-                      <mat-select [formControl]="selected">
+                  <div class="pl-4">
+                    <mat-form-field appearance="outline" class="w-25">
+                      <mat-select [formControl]="selected" class="second-font">
                         <mat-option value="valid"
                           >Ver la más reciente</mat-option
                         >
@@ -26,32 +26,55 @@
                       </mat-select>
                     </mat-form-field>
                   </div>
-                  <div>
-                    <mat-card>
+                  <div *ngFor="let item of itemList; let i = index">
+                    <mat-card class="card second-font">
                       <mat-card-header>
-                        <mat-card-title>
-                          <div class="d-block d-inline">
-                            <p class="text-gray mt-2 mb-0">
-                              Donec aliquet dui vel placerat bibendum.
-                            </p>
+                        <div class="d-flex d-inline mt-4">
+                          <div class="mr-3 my-auto">
+                            <p>{{ i + 1 }}.</p>
                           </div>
-                        </mat-card-title>
-                        <mat-card-subtitle
-                          >Sed scelerisque enim:
-                        </mat-card-subtitle>
+                          <div class="d-block mx-3">
+                            <p class="mb-0 title">Código de consulta</p>
+                            <p class="subtitle">{{ item.code }}</p>
+                          </div>
+                          <div class="d-bloc mx-5">
+                            <p class="mb-0 title">Fecha de postulación</p>
+                            <p class="subtitle">{{ item.startDate }}</p>
+                          </div>
+                          <div class="d-block mx-5">
+                            <p class="mb-0 title">Cierra en</p>
+                            <p class="subtitle">{{ item.closeDate }}</p>
+                          </div>
+                          <div class="d-block mx-5">
+                            <p class="mb-0 title">Estado</p>
+                            <p class="subtitle">{{ item.status }}</p>
+                          </div>
+                          <div class="d-block mx-5 my-auto">
+                            <mat-chip-list aria-label="action">
+                              <mat-chip color="primary" selected
+                                ><p class="mx-3 mt-3">DILIGENCIAR</p></mat-chip
+                              >
+                            </mat-chip-list>
+                          </div>
+                        </div>
                       </mat-card-header>
 
-                      <mat-card-content class="pt-0">
-                        <p class="font-medium">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit ut viverra enim risus, ut varius ipsum dignissim
-                          .
-                        </p></mat-card-content
-                      >
+                      <mat-card-content class="pt-0 mx-5">
+                        <div class="d-flex d-inline mx-2">
+                          <p class="text-primary mr-3">
+                            {{ item.university }}
+                          </p>
+                          <p class="font-medium">
+                            {{ item.text }}
+                          </p>
+                        </div>
+                        <div class="mx-1">
+                          <p class="font-weight-bold">
+                            {{ item.description }}
+                          </p>
+                        </div>
+                      </mat-card-content>
                     </mat-card>
-                  </div>
-                  <div>
-                    <mat-card>Simple card</mat-card>
                   </div>
                 </div>
               </div>

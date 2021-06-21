@@ -1,23 +1,18 @@
-
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import {
-  ChangeDetectorRef,
-  Component,
-  OnDestroy
-
-
-} from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MenuItems } from '../../shared/menu-items/menu-items';
 
-
-import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
+import {
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarDirective,
+} from 'ngx-perfect-scrollbar';
 
 /** @title Responsive sidenav */
 @Component({
   selector: 'app-full-layout',
   templateUrl: 'full.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class FullComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
@@ -42,7 +37,6 @@ export class FullComponent implements OnDestroy {
     this.status = !this.status;
   }
 
-
   constructor(
     public router: Router,
     changeDetectorRef: ChangeDetectorRef,
@@ -59,7 +53,6 @@ export class FullComponent implements OnDestroy {
     // tslint:disable-next-line: deprecation
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-
 
   // Mini sidebar
 }
