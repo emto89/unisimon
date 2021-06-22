@@ -15,6 +15,11 @@ export class ConvenantsComponent implements OnInit {
   private form: FormGroup | undefined;
   selectedValue: string | undefined;
 
+  selected = new FormControl('valid', [
+    Validators.required,
+    Validators.pattern('valid'),
+  ]);
+
   countryList: Country[] = [
     { value: 1, viewValue: 'Argentina' },
     { value: 2, viewValue: 'Colombia' },

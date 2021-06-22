@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
   <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-    <mat-card>
+    <mat-card class="card">
       <mat-card-content class="px-5">
         <div fxLayout="row" fxLayoutWrap="wrap">
           <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
@@ -17,19 +17,22 @@
               <div class="mx-5 my-3">
                 <div class="row d-block">
                   <div class="pl-4">
-                    <mat-form-field appearance="outline" class="w-25">
-                      <mat-select [formControl]="selected" class="second-font">
-                        <mat-option value="valid"
+                    <mat-form-field class="w-25 select my-0">
+                      <mat-select
+                        [formControl]="selected"
+                        class="second-font pb-5 px-4"
+                      >
+                        <mat-option value="valid" class="second-font"
                           >Ver la más reciente</mat-option
                         >
-                        <mat-option value="valid"
+                        <mat-option value="valid" class="second-font"
                           >Ver la más antigua</mat-option
                         >
                       </mat-select>
                     </mat-form-field>
                   </div>
                   <div *ngFor="let item of itemList; let i = index">
-                    <mat-card class="card second-font">
+                    <mat-card class="style-card second-font">
                       <mat-card-header>
                         <div class="d-flex d-inline mt-4">
                           <div class="mr-3 my-auto">

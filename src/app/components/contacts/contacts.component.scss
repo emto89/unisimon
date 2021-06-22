@@ -2,6 +2,12 @@
   font-size: 16px;
   font-weight: 500;
   font-family: "Assistant", sans-serif !important;
+  width: 461px;
+}
+
+.card-info {
+  width: auto;
+  height: auto;
 }
 
 .description {
@@ -11,4 +17,8 @@
 .subtitle {
   color: #777777;
   font-size: 20px;
+}
+
+.card:not([class*="mat-elevation-z0"]) {
+  box-shadow: none !important;
 }

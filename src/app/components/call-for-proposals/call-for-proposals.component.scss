@@ -1,0 +1,36 @@
+.subtitle {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 13px;
+}
+
+.row-content {
+  font-family: "Assistant", sans-serif !important;
+  padding: 20px 15px 15px 20px;
+  text-align: left;
+  display: flex inline;
+  justify-content: space-between;
+  border-top: 1px solid #cdcdcd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mat-chip {
+  background-color: #e8f5ff !important;
+  color: #0c6cb1 !important;
+}
+.accordion {
+  border: 1px solid #24732b;
+  border-radius: none !important;
+}
+.another-accordion .mat-expansion-panel:not(.mat-expanded),
+.another-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+  border-radius: none !important;
+}
+
+.text-blue {
+  color: #0c6cb1;
+  font-family: "Assistant", sans-serif !important;
+}

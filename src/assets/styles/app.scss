@@ -316,13 +316,14 @@ html body {
 }
 
 .card-border {
+  box-shadow: 0px 3px 6px #00000029 !important;
+  opacity: 1;
   border-radius: 15px !important;
 }
 
-.mat-card:not([class*="mat-elevation-z"]) {
+.card:not([class*="mat-elevation-z0"]) {
+  box-shadow: none !important;
   border: none;
-  box-shadow: 0 2px 1px -1px rgb(255, 255, 255), 0 1px 1px 0 rgb(255, 255, 255),
-    0 1px 3px 0 rgb(255, 255, 255);
 }
 
 .text-green {
@@ -574,7 +575,7 @@ Text Colors
 }
 
 .text-success {
-  color: $success !important;
+  color: #8cc63f !important;
 }
 
 .text-info {

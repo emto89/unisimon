@@ -260,20 +260,6 @@
                               formControlName="mobile"
                             />
                           </div>
-                          <div class="form-group">
-                            <label class="form-control-label second-font"
-                              >Dirección de contacto</label
-                            >
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
-                              formControlName="contactAddress"
-                            />
-                          </div>
                         </form>
                       </div>
                       <div class="col-lg-6">
@@ -311,6 +297,35 @@
                             />
                           </div>
                         </form>
+                      </div>
+                      <div class="col-lg-12">
+                        <form [formGroup]="emergencyContact" class="mb-4">
+                          <div class="form-group">
+                            <label class="form-control-label second-font"
+                              >Dirección de contacto</label
+                            >
+                            <input
+                              id="input-name"
+                              class="
+                                form-control form-control-alternative
+                                input
+                              "
+                              type="text"
+                              formControlName="contactAddress"
+                            />
+                          </div>
+                        </form>
+                        <div class="text-right second-font">
+                          <button
+                            mat-raised-button
+                            color="primary"
+                            class="second-font btn-block btn-lg m-t-20 m-b-20"
+                            style="width: 20%"
+                            type="button"
+                          >
+                            CONTINUAR
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

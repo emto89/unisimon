@@ -19,6 +19,7 @@ export class ProgramApplicationComponent implements OnInit {
   public academyData: FormGroup;
   public programRequest: FormGroup;
   public studentData: FormGroup;
+  public destinationInstitution: FormGroup;
 
   matcher = new MyErrorStateMatcher();
   constructor(private formBuilder: FormBuilder) {
@@ -49,6 +50,15 @@ export class ProgramApplicationComponent implements OnInit {
       name_mobility: ['', Validators.required],
       others: ['', Validators.required],
       observations: ['', Validators.required],
+      financing_plan: ['', Validators.required],
+    });
+    this.destinationInstitution = this.formBuilder.group({
+      name: ['', Validators.required],
+      city: ['', Validators.required],
+      country: ['', Validators.required],
+      faculty: ['', Validators.required],
+      program: ['', Validators.required],
+      period: ['', Validators.required],
     });
   }
 

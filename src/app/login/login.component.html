@@ -1,109 +1,139 @@
-<main class="full-page">
-  <section
-    class="pt-5 d-flex justify-content-between w-75"
-    style="margin-left: auto; margin-right: auto"
-  >
-    <div class="bg-message" style="width: 500px">
-      <span class="subtitle">
-        Empoderamos ciudadanos globales en competencias interculturales
-        nacionales, internacionales y de bilingüismo
-      </span>
-    </div>
-    <div>
-      <a class="text-primary">Contacto</a>
-      <a><img src="assets/unisimon/icons/ico-down-black.svg" /></a>
-      <a class="text-primary ml-4">Ayuda</a>
-      <a><img src="assets/unisimon/icons/ico-down-black.svg" /></a>
-    </div>
-  </section>
-  <section class="login-block px-5 pb-5">
-    <mat-card class="container py-0">
-      <div class="col-lg-8 image-container banner-sec">
-        <div class="content">
-          <p class="second-font text-gray weigh" style="font-weight: 500">
-            CONVOCATORIA SALIENTE: La Universidad de Zaragoza ofrece 11 becas
-            para futuros estudiantes de doctorado en diferentes áreas del
-            conocimiento. Convocatoria abierta hasta el 31 de mayo de 2021.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-12 login-sec">
-        <div class="text-center">
-          <img
-            src="assets/unisimon/icons/LogoUNISIMON-01.svg"
-            class="rounded-lg brand"
-          />
-        </div>
-        <div class="mt-5">
-          <h4 class="text-green" style="margin-left: 14px; margin-bottom: 5%">
-            Iniciar Sesión
-          </h4>
-        </div>
-        <div class="d-inline">
-          <div
-            fxFlex.gt-sm="100"
-            fxFlex.gt-xs="100"
-            fxFlex="100"
-            class="text-center"
-          >
-            <mat-form-field appearance="outline" class="pb-0">
-              <input
-                matInput
-                class="second-font"
-                placeholder="Nombre de Usuario"
-                required=""
-                #u1
-              />
-            </mat-form-field>
-          </div>
+<div fxLayout="row" fxLayoutWrap="wrap" class="mx-5">
+  <div class="mx-5" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content class="p-5">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+          <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+            <mat-card>
+              <mat-card-header class="justify-content-center px-5 mx-5">
+                <mat-card-title class="d-flex header mx-5 px-5">
+                  <div class="bg-message mx-5">
+                    <p>
+                      Empoderamos ciudadanos globales en competencias
+                      interculturales nacionales, internacionales y de
+                      bilingüismo
+                    </p>
+                  </div>
 
-          <div
-            fxFlex.gt-sm="100"
-            fxFlex.gt-xs="100"
-            fxFlex="100"
-            class="text-center"
-          >
-            <mat-form-field appearance="outline" class="pb-0">
-              <input
-                matInput
-                type="password"
-                class="second-font"
-                placeholder="Contraseña"
-                required=""
-                #p2
-              />
-            </mat-form-field>
-          </div>
-          <div
-            fxFlex.gt-sm="100"
-            fxFlex.gt-xs="100"
-            fxFlex="100"
-            class="text-center"
-          >
-            <button
-              mat-raised-button
-              class="second-font"
-              color="primary"
-              class="btn-block btn-lg m-t-20 m-b-20"
-              style="width: 90%"
-              (click)="check(u1.value, p2.value)"
-              type="button"
-            >
-              ENTRAR
-            </button>
+                  <div
+                    class="text-primary second-font font-medium mx-5 my-auto"
+                  >
+                    <a>Contacto</a>
+                    <a
+                      ><img src="assets/unisimon/icons/ico-down-black.svg"
+                    /></a>
+                    <a class="ml-4">Ayuda</a>
+                    <a
+                      ><img src="assets/unisimon/icons/ico-down-black.svg"
+                    /></a>
+                  </div>
+                </mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content class="py-0">
+                <div class="px-5">
+                  <div class="container py-0">
+                    <div class="col-lg-8 image-container banner-sec">
+                      <div class="content">
+                        <p
+                          class="second-font text-gray weigh"
+                          style="font-weight: 500"
+                        >
+                          CONVOCATORIA SALIENTE: La Universidad de Zaragoza
+                          ofrece 11 becas para futuros estudiantes de doctorado
+                          en diferentes áreas del conocimiento. Convocatoria
+                          abierta hasta el 31 de mayo de 2021.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 login-sec">
+                      <div class="text-center">
+                        <img
+                          src="assets/unisimon/icons/LogoUNISIMON-01.svg"
+                          class="rounded-lg brand"
+                        />
+                      </div>
+                      <div class="mt-5">
+                        <h4
+                          class="text-green"
+                          style="margin-left: 14px; margin-bottom: 5%"
+                        >
+                          Iniciar Sesión
+                        </h4>
+                      </div>
+                      <div class="d-inline">
+                        <div
+                          fxFlex.gt-sm="100"
+                          fxFlex.gt-xs="100"
+                          fxFlex="100"
+                          class="text-center"
+                        >
+                          <mat-form-field appearance="outline" class="pb-0">
+                            <input
+                              matInput
+                              class="second-font"
+                              placeholder="Nombre de Usuario"
+                              required=""
+                              #u1
+                            />
+                          </mat-form-field>
+                        </div>
+
+                        <div
+                          fxFlex.gt-sm="100"
+                          fxFlex.gt-xs="100"
+                          fxFlex="100"
+                          class="text-center"
+                        >
+                          <mat-form-field appearance="outline" class="pb-0">
+                            <input
+                              matInput
+                              type="password"
+                              class="second-font"
+                              placeholder="Contraseña"
+                              required=""
+                              #p2
+                            />
+                          </mat-form-field>
+                        </div>
+                        <div
+                          fxFlex.gt-sm="100"
+                          fxFlex.gt-xs="100"
+                          fxFlex="100"
+                          class="text-center"
+                        >
+                          <button
+                            mat-raised-button
+                            color="primary"
+                            class="second-font btn-block btn-lg m-t-20 m-b-20"
+                            style="width: 90%"
+                            (click)="check(u1.value, p2.value)"
+                            type="button"
+                          >
+                            ENTRAR
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-footer class="w-75 pt-0 ml-auto mr-auto text-right">
+                <div>
+                  <p class="footer mt-5 mb-2">
+                    Derechos reservados · UNISIMON 2020, B/quilla, CO
+                  </p>
+                  <p style="font-size: 15px" class="m-0">
+                    <a href="" class="text-primary"
+                      >Ver Política de Tratamient De Datos Personales</a
+                    >
+                  </p>
+                </div>
+              </mat-card-footer>
+            </mat-card>
           </div>
         </div>
-      </div>
+      </mat-card-content>
     </mat-card>
-    <div class="w-75" style="margin-left: auto; margin-right: auto">
-      <p class="footer mt-5 mb-2" style="text-align: end">
-        Derechos reservados · UNISIMON 2020, B/quilla, CO
-      </p>
-      <p style="text-align: end; font-size: 15px" class="m-0">
-        <a href="" class="text-primary"
-          >Ver Política de Tratamient De Datos Personales</a
-        >
-      </p>
-    </div>
-  </section>
-</main>
+  </div>
+</div>

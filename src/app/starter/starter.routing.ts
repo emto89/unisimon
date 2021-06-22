@@ -58,7 +58,7 @@ export const StarterRoutes: Routes = [
     component: ProgramApplicationComponent,
   },
   {
-    path: 'proposals',
+    path: 'proposals', //THIS
     component: CallForProposalsComponent,
   },
   {

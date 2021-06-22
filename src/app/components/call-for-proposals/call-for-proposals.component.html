@@ -5,19 +5,953 @@
         <div fxLayout="row" fxLayoutWrap="wrap">
           <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
             <div>
-              <div class="d-flex">
-                <a class="my-auto"
+              <div class="d-flex my-auto">
+                <a class="my-0"
                   ><img src="assets/unisimon/icons/ico-back.svg"
                 /></a>
-                <h2 class="page-title text-green ml-4">
-                  Convocatorias Disponibles
+                <h2 class="page-title text-green mx-4">Inscripción</h2>
+                <h2 class="page-title text-green font-weight-bold">
+                  {{ proposalName }}
                 </h2>
               </div>
 
               <div class="m-5">
                 <div class="row">
-                  <div class="col-lg-6"></div>
-                  <div class="col-lg-6"></div>
+                  <div class="col-lg-8">
+                    <div *ngFor="let item of itemList; let i = index">
+                      <div class="d-flex d-inline font-medium">
+                        <p class="text-primary">{{ item.university }}</p>
+                        <p>{{ item.text }}</p>
+                      </div>
+                      <div>
+                        <p class="font-weight-bold">{{ item.description }}</p>
+                        <div class="d-flex d-inline mt-4">
+                          <div class="d-block">
+                            <p class="mb-0 title">Código de consulta</p>
+                            <p class="subtitle">{{ item.code }}</p>
+                          </div>
+                          <div class="d-bloc mx-5">
+                            <p class="mb-0 title">Fecha de postulación</p>
+                            <p class="subtitle">{{ item.startDate }}</p>
+                          </div>
+                          <div class="d-block mx-5">
+                            <p class="mb-0 title">Cierra en</p>
+                            <p class="subtitle">{{ item.closeDate }}</p>
+                          </div>
+                          <div class="d-block mx-5">
+                            <p class="mb-0 title">Estado</p>
+                            <p class="subtitle">{{ item.status }}</p>
+                          </div>
+                        </div>
+                        <div>
+                          <mat-accordion>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 1</div>
+                                    <div>80%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Postulación del estudiante unisimon
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 2</div>
+                                    <div>0%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Estudio académico
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 3</div>
+                                    <div>0%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Postulación institución destino
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 4</div>
+                                    <div>0%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Preparación para movilidad
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 5</div>
+                                    <div>0%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Durante la movilidad
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel class="accordion">
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title class="px-3 py-5">
+                                  <div class="d-block font-medium text-center">
+                                    <div>PASO 6</div>
+                                    <div>0%</div>
+                                  </div>
+                                  <h3 class="text-green text-uppercase mx-4">
+                                    Fin de la movilidad
+                                  </h3>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="">
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Registro de datos personales</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-warning">50%</div>
+                                  <div>
+                                    Registro de solicitud de programas de
+                                    movilidad
+                                  </div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">
+                                        Terminar
+                                      </p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Ensayo de motivación</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Acta de responsabilidad estudiantil</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Formato hoja de vida</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Pasaporte</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cédula o documento de identidad</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Carné</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-success">100%</div>
+                                  <div>Cara recomendación académica</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip class="mat-chip" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                                <div class="row row-content">
+                                  <div class="text-danger">0%</div>
+                                  <div>Foto fondo blanco 3x4</div>
+                                  <mat-chip-list aria-label="action">
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Abrir</p></mat-chip
+                                    >
+                                    <mat-chip color="primary" selected
+                                      ><p class="mx-3 mt-3">Cargar</p></mat-chip
+                                    >
+                                  </mat-chip-list>
+                                </div>
+                              </div>
+                            </mat-expansion-panel>
+                          </mat-accordion>
+                        </div>
+                        <div class="py-5">
+                          <mat-accordion>
+                            <mat-expansion-panel
+                              class="accordion"
+                              hideToggle
+                              [expanded]="true"
+                            >
+                              <mat-expansion-panel-header
+                                class="second-font px-3 py-5"
+                              >
+                                <mat-panel-title
+                                  class="px-3 py-5 d-flex d-inline"
+                                >
+                                  <div class="pl-3 py-0">
+                                    <a
+                                      ><img
+                                        src="assets/unisimon/icons/ico-taskOk.svg"
+                                    /></a>
+                                  </div>
+                                  <div>
+                                    <p class="ml-3 mb-0">
+                                      Haz completado el Paso 01.
+                                    </p>
+                                    <h3 class="ml-3 text-green text-uppercase">
+                                      POSTULACIÓN DEL ESTUDIANTE UNISIMÓN
+                                    </h3>
+                                  </div>
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+
+                              <div class="ml-5">
+                                <div class="row">
+                                  <div class="col-lg-6 d-block">
+                                    <p class="mb-0 title">
+                                      Código de consulta:
+                                    </p>
+
+                                    <h3 class="text-green text-uppercase">
+                                      01234567890
+                                    </h3>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <p class="mb-0 title">Estado</p>
+
+                                    <h3 class="text-green text-uppercase">
+                                      Registro de archivos
+                                    </h3>
+                                  </div>
+                                </div>
+                                <p
+                                  class="second-font font-medium"
+                                  style="font-size: 16px"
+                                >
+                                  Su proceso esta a la espera de la revisión,
+                                  evaluación y aprobación por parte del Director
+                                  de programa, la Coordinador de
+                                  internacionalización y a su vez la Dependencia
+                                  de notas y Bienestar Universitario.
+                                </p>
+                              </div>
+                            </mat-expansion-panel>
+                          </mat-accordion>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg"></div>
+                  <div class="col-lg-3">
+                    <mat-card class="card-info">
+                      <mat-card-header>
+                        <mat-card-title>
+                          <div class="d-block d-inline">
+                            <a
+                              ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                            /></a>
+                            <h3 class="text-green my-2">
+                              El proceso de postulación ha iniciado
+                            </h3>
+                          </div>
+                        </mat-card-title>
+                        <mat-card-subtitle
+                          class="subtitle-card second-font font-medium"
+                          >Sigue estos pasos que serán de guía antes, durante y
+                          después de la movilidad. <br /><br />Carga y
+                          actualízalos los documentos y monitorea tus progresos
+                          para cumplir con los plazos por
+                          convocatoria.</mat-card-subtitle
+                        >
+                      </mat-card-header>
+
+                      <mat-card-content class="pt-0">
+                        <p class="font-medium">Recomendaciones</p>
+                        <mat-list>
+                          <mat-list-item class="text-blue px-0">
+                            <i
+                              class="fa fa-circle mr-2 my-0"
+                              style="font-size: 12px"
+                            ></i>
+                            Escanear documentos
+                          </mat-list-item>
+                          <mat-list-item class="text-blue px-0 my-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Comprimir archivos
+                          </mat-list-item>
+                          <!-- review -->
+                          <mat-list-item class="text-blue px-0">
+                            <i
+                              class="fa fa-circle mr-2"
+                              style="font-size: 12px"
+                            ></i>
+                            Pide ayuda
+                          </mat-list-item>
+                        </mat-list>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
                 </div>
               </div>
             </div>

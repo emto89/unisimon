@@ -80,7 +80,7 @@
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="academyData" class="mb-3">
-                          <div class="form-group">
+                          <div class="form-group mt-4">
                             <label class="form-control-label second-font"
                               >Idiomas</label
                             >
@@ -119,13 +119,14 @@
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="academyData" class="mb-3">
-                          <div class="form-group">
+                          <div class="form-group mt-4">
                             <input
                               id="input-name"
                               class="
                                 form-control form-control-alternative
                                 input
                               "
+                              placeholder="Otro? Cuál?"
                               type="text"
                               formControlName="other"
                             />
@@ -231,13 +232,14 @@
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="economicStatus" class="mb-3">
-                          <div class="form-group">
+                          <div class="form-group mt-4">
                             <input
                               id="input-name"
                               class="
                                 form-control form-control-alternative
                                 input
                               "
+                              placeholder="Ciudad/Sede"
                               type="text"
                               formControlName="city"
                             />
@@ -246,122 +248,310 @@
                       </div>
                     </div>
 
-                    <div class="row">
-                      <h4 class="text-green">
+                    <div>
+                      <h3 class="text-green py-4">
                         Programa de movilidad a solicitar
-                      </h4>
-                      <div class="col-lg-6 d-block">
+                      </h3>
+                      <div class="row">
+                        <div class="col-lg-6 d-block">
+                          <h4 class="text-gray form-control-title">
+                            Carácter de la movilidad
+                          </h4>
+                          <form [formGroup]="programRequest" class="mb-3">
+                            <div class="form-group">
+                              <input
+                                id="input-name"
+                                class="
+                                  form-control form-control-alternative
+                                  input
+                                "
+                                type="text"
+                                formControlName="nature_mobility"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <input
+                                id="input-name"
+                                class="
+                                  form-control form-control-alternative
+                                  input
+                                "
+                                placeholder="Elija uno de la lista"
+                                type="text"
+                                formControlName="name_mobility"
+                              />
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-lg-6 space">
+                          <form [formGroup]="programRequest" class="mb-3">
+                            <div class="form-group space my-auto">
+                              <input
+                                id="input-name"
+                                class="
+                                  form-control form-control-alternative
+                                  input
+                                "
+                                placeholder="Otro? Cuál?"
+                                type="text"
+                                formControlName="others"
+                              />
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <div>
                         <h4 class="text-gray form-control-title">
-                          Carácter de la movilidad
+                          Observaciones
                         </h4>
                         <form [formGroup]="programRequest" class="mb-3">
-                          <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
-                              formControlName="nature_mobility"
-                            />
-                          </div>
-                          <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
-                              formControlName="name_mobility"
-                            />
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-lg-6">
-                        <form [formGroup]="programRequest" class="mb-3">
-                          <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
-                              formControlName="others"
-                            />
-                          </div>
-                        </form>
-                      </div>
-                      <div>
-                        <form [formGroup]="programRequest" class="mb-3">
-                          <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
+                          <mat-form-field class="example-full-width">
+                            <textarea
+                              class="input"
+                              matInput
                               formControlName="observations"
-                            />
-                          </div>
+                            ></textarea>
+                          </mat-form-field>
                         </form>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 class="text-green py-4">
+                        Financiación de la movilidad
+                      </h3>
+                      <div class="row">
+                        <div class="col-lg-6 d-block">
+                          <form [formGroup]="programRequest" class="mb-3">
+                            <div class="form-group">
+                              <input
+                                id="input-name"
+                                class="
+                                  form-control form-control-alternative
+                                  input
+                                "
+                                type="text"
+                                formControlName="financing_plan"
+                              />
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 class="text-green py-4">
+                        Datos académicos institución destino
+                      </h3>
+                      <div class="row">
+                        <div class="col-lg-6 d-block">
+                          <form
+                            [formGroup]="destinationInstitution"
+                            class="mb-3"
+                          >
+                            <div class="form-group">
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Nombre institución</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="name"
+                                />
+                              </div>
+
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Ciudad</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="city"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Facultad</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="faculty"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-lg-6 d-block">
+                          <form
+                            [formGroup]="destinationInstitution"
+                            class="mb-3"
+                          >
+                            <div class="form-group">
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Periodo de movilidad</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="period"
+                                />
+                              </div>
+
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Pais</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="country"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-control-label second-font"
+                                  >Programa Académico</label
+                                >
+                                <input
+                                  id="input-name"
+                                  class="
+                                    form-control form-control-alternative
+                                    input
+                                  "
+                                  type="text"
+                                  formControlName="program"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="px-5 d-flex d-inline text-left">
+                        <div class="pr-4">
+                          <button
+                            mat-raised-button
+                            color="primary"
+                            style="width: 180px; height: 51px"
+                            class="btn-block btn-lg second-font"
+                            type="button"
+                          >
+                            GUARDAR BORRADOR
+                          </button>
+                        </div>
+
+                        <div>
+                          <button
+                            mat-raised-button
+                            color="primary"
+                            style="width: 150px; height: 51px"
+                            class="btn-block btn-lg second-font"
+                            type="button"
+                          >
+                            CONTINUAR
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4">
-                    <mat-card class="card-info">
-                      <mat-card-header>
-                        <mat-card-title>
-                          <div class="d-block d-inline">
-                            <a
-                              ><img src="assets/unisimon/icons/ico-ayuda.svg"
-                            /></a>
-                            <h3 class="text-green my-2">
-                              El proceso de postulación ha iniciado
-                            </h3>
-                          </div>
-                        </mat-card-title>
-                        <mat-card-subtitle
-                          class="subtitle-card second-font font-medium"
-                          >Sigue estos pasos que serán de guía antes, durante y
-                          después de la movilidad. <br /><br />Carga y
-                          actualízalos los documentos y monitorea tus progresos
-                          para cumplir con los plazos por
-                          convocatoria.</mat-card-subtitle
-                        >
-                      </mat-card-header>
+                    <div class="row">
+                      <mat-card class="card-info">
+                        <mat-card-header>
+                          <mat-card-title>
+                            <div class="d-block d-inline">
+                              <a
+                                ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                              /></a>
+                              <h3 class="text-green my-2">
+                                El proceso de postulación ha iniciado
+                              </h3>
+                            </div>
+                          </mat-card-title>
+                          <mat-card-subtitle
+                            class="subtitle-card second-font font-medium"
+                            >Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit ut viverra enim risus, ut varius ipsum
+                            dignissim .</mat-card-subtitle
+                          >
+                        </mat-card-header>
 
-                      <mat-card-content class="pt-0">
-                        <p class="font-medium">Recomendaciones</p>
-                        <mat-list>
-                          <mat-list-item class="text-blue px-0">
-                            <i
-                              class="fa fa-circle mr-2 my-0"
-                              style="font-size: 12px"
-                            ></i>
-                            Escanear documentos
-                          </mat-list-item>
-                          <mat-list-item class="text-blue px-0 my-0">
-                            <i
-                              class="fa fa-circle mr-2"
-                              style="font-size: 12px"
-                            ></i>
-                            Comprimir archivos
-                          </mat-list-item>
-                          <!-- review -->
-                          <mat-list-item class="text-blue px-0">
-                            <i
-                              class="fa fa-circle mr-2"
-                              style="font-size: 12px"
-                            ></i>
-                            Pide ayuda
-                          </mat-list-item>
-                        </mat-list>
-                      </mat-card-content>
-                    </mat-card>
+                        <mat-card-content class="pt-0">
+                          <p class="font-medium">Recomendaciones</p>
+                          <mat-list>
+                            <mat-list-item class="text-blue px-0">
+                              <i
+                                class="fa fa-circle mr-2 my-0"
+                                style="font-size: 12px"
+                              ></i>
+                              Escanear documentos
+                            </mat-list-item>
+                            <mat-list-item class="text-blue px-0 my-0">
+                              <i
+                                class="fa fa-circle mr-2"
+                                style="font-size: 12px"
+                              ></i>
+                              Comprimir archivos
+                            </mat-list-item>
+                            <!-- review -->
+                            <mat-list-item class="text-blue px-0">
+                              <i
+                                class="fa fa-circle mr-2"
+                                style="font-size: 12px"
+                              ></i>
+                              Pide ayuda
+                            </mat-list-item>
+                          </mat-list>
+                        </mat-card-content>
+                      </mat-card>
+                    </div>
+                    <div class="row" style="padding-top: 70%">
+                      <mat-card class="card-info2">
+                        <mat-card-header>
+                          <mat-card-title>
+                            <div class="d-block d-inline">
+                              <a
+                                ><img src="assets/unisimon/icons/ico-ayuda.svg"
+                              /></a>
+                              <h3 class="text-green my-2">
+                                El proceso de postulación ha iniciado
+                              </h3>
+                            </div>
+                          </mat-card-title>
+                          <mat-card-subtitle
+                            class="subtitle-card second-font font-medium"
+                            >Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit ut viverra enim risus, ut varius ipsum
+                            dignissim .</mat-card-subtitle
+                          >
+                        </mat-card-header>
+                      </mat-card>
+                    </div>
                   </div>
                 </div>
               </div>

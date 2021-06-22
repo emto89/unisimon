@@ -68,6 +68,11 @@ File: scss
   font-weight: 400;
 }
 
+.mat-accordion .mat-expansion-panel:not(.mat-expanded),
+.mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+  border-radius: 15px !important;
+}
+
 .text-blue {
   color: #0c6cb1;
 }

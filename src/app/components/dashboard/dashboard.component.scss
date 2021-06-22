@@ -1,23 +1,40 @@
 .image-container {
   position: relative;
   max-width: 100%; /* Maximum width */
-  // margin: 0 auto;
 }
 
 .image-container .content {
   position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(255, 255, 255); /* Fallback color */
-  background: rgba(255, 255, 255, 0.8); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: transparent; /* Fallback color */
+  background: transparent; /* Black background with 0.5 opacity */
+  color: #444444; /* Grey text */
   width: 100%; /* Full width */
   padding: 20px; /* Some padding */
+  text-align: center;
+  padding: 10%;
 }
 
-.background-unisimon {
-  background-image: url("../../../assets/unisimon/images/foto-dashboard.jpg");
-  background-color: #e0dfdf;
-  background-size: cover;
-  // border-radius: 0 10px 10px 0;
-  padding: 0;
+.subtitle {
+  width: 675px;
+  font: normal normal medium 14px/20px Assistant;
+  letter-spacing: 0.46px;
+  opacity: 1;
+}
+
+.card-line {
+  padding-top: 40%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.description-text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 675px;
+  height: 38px;
+  font: normal normal medium 14px/20px Assistant;
+  letter-spacing: 0.46px;
+  color: #444444;
+  opacity: 1;
 }
