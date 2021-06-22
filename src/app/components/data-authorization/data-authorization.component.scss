@@ -1,4 +1,3 @@
-::ng-deep .mat-card {
-  border: none;
-  box-shadow: none;
+.mat-card::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #0678BD;
 }

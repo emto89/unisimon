@@ -76,6 +76,11 @@ File: scss
 .text-blue {
   color: #0c6cb1;
 }
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #0678BD;
+}
+
 $custom-typography: mat-typography-config(
   $font-family: "Roboto Condensed",
 );
