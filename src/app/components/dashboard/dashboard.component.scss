@@ -1,13 +1,13 @@
 .image-container {
-  position: relative;
+  background-image: url("../../../assets/unisimon/images/foto-dashboard.jpg") !important;
+  background-size: cover;
   max-width: 100%; /* Maximum width */
+  height: auto;
 }
 
 .image-container .content {
   position: absolute; /* Position the background text */
   top: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: transparent; /* Fallback color */
-  background: transparent; /* Black background with 0.5 opacity */
   color: #444444; /* Grey text */
   width: 100%; /* Full width */
   padding: 20px; /* Some padding */

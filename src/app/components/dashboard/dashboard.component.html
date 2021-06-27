@@ -1,47 +1,46 @@
 <div fxLayout="row" fxLayoutWrap="wrap">
-  <div
-    class="image-container"
-    fxFlex.gt-sm="100"
-    fxFlex.gt-xs="100"
-    fxFlex="100"
-  >
+  <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
     <img
       class="img-fluid"
       alt="homepage"
-      style="width: 100%"
+      style="width: 100vw"
       src="assets/unisimon/images/foto-dashboard.jpg"
     />
-    <div class="content">
-      <h1>Movilidad Estudiantil: Novedades en Oportunidades e Invitaciones</h1>
-      <p class="description-text">
-        CONVOCATORIA SALIENTE: La Universidad de Zaragoza ofrece 11 becas para
-        futuros estudiantes de doctorado en diferentes áreas del conocimiento.
-        Convocatoria abierta hasta el 31 de mayo de 2021.
-      </p>
-      <div class="d-flex d-inline card-line">
-        <mat-card
-          class="style-card"
-          *ngFor="let item of itemList; let i = index"
-        >
-          <mat-card-header>
-            <mat-card-title class="text-green mt-5 mb-0"
-              ><h3>{{ item.title }}</h3></mat-card-title
-            >
-          </mat-card-header>
-          <mat-card-content class="second-font font-medium py-0 text-left"
-            ><p>{{ item.text }}</p></mat-card-content
+    <div class="image-container">
+      <div class="content">
+        <h1>
+          Movilidad Estudiantil: Novedades en Oportunidades e Invitaciones
+        </h1>
+        <p class="description-text">
+          CONVOCATORIA SALIENTE: La Universidad de Zaragoza ofrece 11 becas para
+          futuros estudiantes de doctorado en diferentes áreas del conocimiento.
+          Convocatoria abierta hasta el 31 de mayo de 2021.
+        </p>
+        <div class="d-flex d-inline card-line justify-content-center">
+          <mat-card
+            class="style-card"
+            *ngFor="let item of itemList; let i = index"
           >
+            <mat-card-header>
+              <mat-card-title class="text-green mt-5 mb-0"
+                ><h3>{{ item.title }}</h3></mat-card-title
+              >
+            </mat-card-header>
+            <mat-card-content class="second-font font-medium py-0 text-left"
+              ><p>{{ item.text }}</p></mat-card-content
+            >
 
-          <mat-card-actions class="p-4 text-center">
-            <div class="ml-auto mr-auto">
-              <mat-chip-list aria-label="action">
-                <mat-chip color="primary" selected
-                  ><p class="mx-3 mt-3 second-font">POSTULARSE</p></mat-chip
-                >
-              </mat-chip-list>
-            </div>
-          </mat-card-actions>
-        </mat-card>
+            <mat-card-actions class="p-4 text-center">
+              <div class="ml-auto mr-auto">
+                <mat-chip-list aria-label="action">
+                  <mat-chip color="primary" selected
+                    ><p class="mx-3 mt-3 second-font">POSTULARSE</p></mat-chip
+                  >
+                </mat-chip-list>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </div>
       </div>
     </div>
   </div>

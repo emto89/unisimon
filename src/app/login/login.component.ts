@@ -6,24 +6,24 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
-  FormControl
+  FormControl,
 } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [MyserviceService]
+  providers: [MyserviceService],
 })
 export class LoginComponent implements OnInit {
   msg = '';
-  constructor(private service: MyserviceService, private routes: Router) { }
+  constructor(private service: MyserviceService, private routes: Router) {}
 
   check(uname: string, p: string) {
     const output = this.service.checkusernameandpassword(uname, p);
     if (output == true) {
-      this.routes.navigate(['/starter']);
-    } else {  
+      this.routes.navigate(['/dashboard']);
+    } else {
       this.msg = 'Invalid Username or Password';
     }
   }
