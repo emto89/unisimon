@@ -12,14 +12,17 @@ export class DashboardComponent implements AfterViewInit {
     {
       title: 'POSTULACIONES',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      url:'/dashboard/my-nominations',
     },
     {
       title: 'CONVOCATORIAS',
       text: 'Fusce efficitur consequat est. Vestibulum suscipit tristique.',
+      url:'/dashboard/available-calls',
     },
     {
       title: 'CONVENIOS',
       text: 'Justo congue. Nulla nissim condimentum et rhoncus.',
+      url:'/dashboard/convenants'
     },
   ];
   ngAfterViewInit() {}
@@ -28,4 +31,5 @@ export class DashboardComponent implements AfterViewInit {
 interface Item {
   title: string;
   text: string;
+  url: string;
 }
