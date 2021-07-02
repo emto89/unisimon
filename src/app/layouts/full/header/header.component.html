@@ -1,24 +1,17 @@
 <!-- ============================================================== -->
-<!-- Notification - style you can find in header.scss -->
-<!-- ============================================================== -->
-
-<!-- ============================================================== -->
 <!-- Profile - style you can find in header.scss -->
 <!-- ============================================================== -->
 <div class="d-flex d-inline second-font">
-  <a class="text-primary" routerLink='/dashboard/contacts'>Contactos</a>
-  <a class="text-primary mx-5" routerLink='/dashboard/faq'>Ayuda</a>
-  <button mat-icon-button class="m-r-5">
+  <a class="text-primary" routerLink="/dashboard/contacts">Contactos</a>
+  <a class="text-primary mx-5" routerLink="/dashboard/faq">Ayuda</a>
+  <a class="m-r-5">
     <img src="assets/images/users/5.jpg" alt="user" class="profile-pic" />
+  </a>
+  <button mat-icon-button [matMenuTriggerFor]="profile">
+    <img src="assets/unisimon/icons/ico-down-black.svg" />
   </button>
-  <a><img src="assets/unisimon/icons/ico-down-black.svg" /></a>
-</div>
 
-<!-- <mat-menu #profile="matMenu" class="mymegamenu">
-  <button mat-menu-item><mat-icon>settings</mat-icon> Settings</button>
-  <button mat-menu-item><mat-icon>account_box</mat-icon> Profile</button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon> Disable notifications
-  </button>
-  <button mat-menu-item><mat-icon>exit_to_app</mat-icon> Sign Out</button>
-</mat-menu> -->
+  <mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item routerLink="/login">Cerrar sesión</button>
+  </mat-menu>
+</div>

@@ -17,19 +17,16 @@
               <div class="mx-5 my-3">
                 <div class="row d-block">
                   <div class="pl-4">
-                    <mat-form-field class="w-25 select my-0">
-                      <mat-select
-                        [formControl]="selected"
-                        class="second-font pb-5 px-4"
-                      >
-                        <mat-option value="valid" class="second-font"
-                          >Ver la más reciente</mat-option
-                        >
-                        <mat-option value="valid" class="second-font"
-                          >Ver la más antigua</mat-option
-                        >
-                      </mat-select>
-                    </mat-form-field>
+                    <form>
+                      <select #mySelect class="custom-select second-font">
+                        <option value="recent" class="second-font">
+                          Ver la más reciente
+                        </option>
+                        <option value="last" class="second-font">
+                          Ver la más antigua
+                        </option>
+                      </select>
+                    </form>
                   </div>
                   <div *ngFor="let item of itemList; let i = index">
                     <mat-card class="style-card second-font">
@@ -38,14 +35,21 @@
                           <div class="mr-3 my-auto">
                             <p>{{ i + 1 }}.</p>
                           </div>
-                          <p class="text-primary col ml-3">{{ item.university }}</p>
+                          <p class="text-primary col ml-3">
+                            {{ item.university }}
+                          </p>
                           <p class="mx-3 col">{{ item.text }}</p>
                           <p class="mx-3 col">{{ item.closeDate }}</p>
 
                           <div class="col d-block mx-3 mb-4 text-end">
                             <mat-chip-list aria-label="action">
                               <mat-chip color="primary" selected
-                                ><p class="mx-3 mt-3" routerLink='/dashboard/register'>POSTULARSE</p></mat-chip
+                                ><p
+                                  class="mx-3 mt-3"
+                                  routerLink="/dashboard/register"
+                                >
+                                  POSTULARSE
+                                </p></mat-chip
                               >
                             </mat-chip-list>
                           </div>

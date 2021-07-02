@@ -15,19 +15,16 @@
               <div class="mx-5 my-3">
                 <div class="row d-block">
                   <div class="pl-4">
-                    <mat-form-field class="w-25 select">
-                      <mat-select
-                        [formControl]="selected"
-                        class="second-font pb-5 px-4"
-                      >
-                        <mat-option value="valid" class="second-font"
-                          >Ver la más reciente</mat-option
-                        >
-                        <mat-option value="valid" class="second-font"
-                          >Ver la más antigua</mat-option
-                        >
-                      </mat-select>
-                    </mat-form-field>
+                    <form>
+                      <select #mySelect class="custom-select second-font">
+                        <option value="recent" class="second-font">
+                          Ver la más reciente
+                        </option>
+                        <option value="last" class="second-font">
+                          Ver la más antigua
+                        </option>
+                      </select>
+                    </form>
                   </div>
                   <div *ngFor="let item of itemList; let i = index">
                     <mat-card class="style-card second-font">
@@ -40,7 +37,7 @@
                             <p class="mb-0 title">Código de consulta</p>
                             <p class="subtitle">{{ item.code }}</p>
                           </div>
-                          <div class=" col d-bloc mx-5">
+                          <div class="col d-bloc mx-5">
                             <p class="mb-0 title">Fecha de postulación</p>
                             <p class="subtitle">{{ item.startDate }}</p>
                           </div>

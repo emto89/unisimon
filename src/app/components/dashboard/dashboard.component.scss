@@ -10,9 +10,9 @@
   top: 0; /* At the bottom. Use top:0 to append it to the top */
   color: #444444; /* Grey text */
   width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
   text-align: center;
-  padding: 10%;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 
 .subtitle {
@@ -23,7 +23,7 @@
 }
 
 .card-line {
-  padding-top: 10%;
+  padding-top: 20%;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -37,4 +37,8 @@
   letter-spacing: 0.46px;
   color: #444444;
   opacity: 1;
+}
+
+.style-card {
+  width: 260px;
 }

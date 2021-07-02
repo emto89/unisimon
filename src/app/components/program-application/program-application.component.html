@@ -24,33 +24,48 @@
                             Tipo de movilidad
                           </h4>
                           <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
+                            <select
+                              #mySelect
                               formControlName="type"
-                            />
+                              class="form-select second-font"
+                            >
+                              <option value="entrante" class="second-font">
+                                Entrante
+                              </option>
+                              <option value="saliente" class="second-font">
+                                Saliente
+                              </option>
+                            </select>
                           </div>
                         </form>
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="economicStatus" class="mb-3">
                           <h4 class="text-gray form-control-title">
-                            Población económica
+                            Población académica
                           </h4>
                           <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
+                            <select
+                              #mySelect
                               formControlName="economic_population"
-                            />
+                              class="form-select second-font"
+                            >
+                              <option
+                                value=""
+                                class="second-font"
+                                selected
+                                disabled
+                                hidden
+                              >
+                                Elije uno de la lista
+                              </option>
+                              <option value="1" class="second-font">
+                                Población 1
+                              </option>
+                              <option value="2" class="second-font">
+                                Población 2
+                              </option>
+                            </select>
                           </div>
                         </form>
                       </div>
@@ -105,15 +120,27 @@
                             Nivel de formación
                           </h4>
                           <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
+                            <select
+                              #mySelect
                               formControlName="education_level"
-                            />
+                              class="form-select second-font"
+                            >
+                              <option
+                                value=""
+                                class="second-font"
+                                selected
+                                disabled
+                                hidden
+                              >
+                                Elije uno de la lista
+                              </option>
+                              <option value="1" class="second-font">
+                                Opcion 1
+                              </option>
+                              <option value="2" class="second-font">
+                                Opcion 2
+                              </option>
+                            </select>
                           </div>
                         </form>
                       </div>
@@ -218,31 +245,54 @@
                             Ubicación
                           </h4>
                           <div class="form-group">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              type="text"
+                            <select
+                              #mySelect
                               formControlName="location"
-                            />
+                              class="form-select second-font"
+                            >
+                              <option
+                                value=""
+                                class="second-font"
+                                selected
+                                disabled
+                                hidden
+                              >
+                                País
+                              </option>
+                              <option value="1" class="second-font">
+                                Opcion 1
+                              </option>
+                              <option value="2" class="second-font">
+                                Opcion 2
+                              </option>
+                            </select>
                           </div>
                         </form>
                       </div>
                       <div class="col-lg-6">
                         <form [formGroup]="economicStatus" class="mb-3">
                           <div class="form-group mt-4">
-                            <input
-                              id="input-name"
-                              class="
-                                form-control form-control-alternative
-                                input
-                              "
-                              placeholder="Ciudad/Sede"
-                              type="text"
+                            <select
+                              #mySelect
                               formControlName="city"
-                            />
+                              class="form-select second-font"
+                            >
+                              <option
+                                value=""
+                                class="second-font"
+                                selected
+                                disabled
+                                hidden
+                              >
+                                Ciudad/Sede
+                              </option>
+                              <option value="1" class="second-font">
+                                Opcion 1
+                              </option>
+                              <option value="2" class="second-font">
+                                Opcion 2
+                              </option>
+                            </select>
                           </div>
                         </form>
                       </div>
@@ -259,27 +309,50 @@
                           </h4>
                           <form [formGroup]="programRequest" class="mb-3">
                             <div class="form-group">
-                              <input
-                                id="input-name"
-                                class="
-                                  form-control form-control-alternative
-                                  input
-                                "
-                                type="text"
+                              <select
+                                #mySelect
                                 formControlName="nature_mobility"
-                              />
+                                class="form-select second-font"
+                              >
+                                <option
+                                  value=""
+                                  class="second-font"
+                                  selected
+                                  disabled
+                                  hidden
+                                >
+                                  Elije uno de la lista
+                                </option>
+                                <option value="1" class="second-font">
+                                  Nacional
+                                </option>
+                                <option value="2" class="second-font">
+                                  Internacional
+                                </option>
+                              </select>
                             </div>
                             <div class="form-group">
-                              <input
-                                id="input-name"
-                                class="
-                                  form-control form-control-alternative
-                                  input
-                                "
-                                placeholder="Elija uno de la lista"
-                                type="text"
+                              <select
+                                #mySelect
                                 formControlName="name_mobility"
-                              />
+                                class="form-select second-font"
+                              >
+                                <option
+                                  value=""
+                                  class="second-font"
+                                  selected
+                                  disabled
+                                  hidden
+                                >
+                                  Elije uno de la lista
+                                </option>
+                                <option value="1" class="second-font">
+                                  Opcion 1
+                                </option>
+                                <option value="2" class="second-font">
+                                  Opcion 2
+                                </option>
+                              </select>
                             </div>
                           </form>
                         </div>
@@ -306,13 +379,14 @@
                           Observaciones
                         </h4>
                         <form [formGroup]="programRequest" class="mb-3">
-                          <mat-form-field class="example-full-width">
+                          <div class="form-group">
                             <textarea
-                              class="input"
-                              matInput
+                              rows="3"
+                              class="form-control form-control-alternative"
+                              placeholder="Descripción ..."
                               formControlName="observations"
                             ></textarea>
-                          </mat-form-field>
+                          </div>
                         </form>
                       </div>
                     </div>
@@ -325,15 +399,27 @@
                         <div class="col-lg-6 d-block">
                           <form [formGroup]="programRequest" class="mb-3">
                             <div class="form-group">
-                              <input
-                                id="input-name"
-                                class="
-                                  form-control form-control-alternative
-                                  input
-                                "
-                                type="text"
+                              <select
+                                #mySelect
                                 formControlName="financing_plan"
-                              />
+                                class="form-select second-font"
+                              >
+                                <option
+                                  value=""
+                                  class="second-font"
+                                  selected
+                                  disabled
+                                  hidden
+                                >
+                                  Elije uno de la lista
+                                </option>
+                                <option value="1" class="second-font">
+                                  Opcion 1
+                                </option>
+                                <option value="2" class="second-font">
+                                  Opcion 2
+                                </option>
+                              </select>
                             </div>
                           </form>
                         </div>
@@ -407,30 +493,56 @@
                                 <label class="form-control-label second-font"
                                   >Periodo de movilidad</label
                                 >
-                                <input
-                                  id="input-name"
-                                  class="
-                                    form-control form-control-alternative
-                                    input
-                                  "
-                                  type="text"
+
+                                <select
+                                  #mySelect
                                   formControlName="period"
-                                />
+                                  class="form-select second-font"
+                                >
+                                  <option
+                                    value=""
+                                    class="second-font"
+                                    selected
+                                    disabled
+                                    hidden
+                                  >
+                                    Elije uno de la lista
+                                  </option>
+                                  <option value="1" class="second-font">
+                                    Opcion 1
+                                  </option>
+                                  <option value="2" class="second-font">
+                                    Opcion 2
+                                  </option>
+                                </select>
                               </div>
 
                               <div class="mb-3">
                                 <label class="form-control-label second-font"
                                   >Pais</label
                                 >
-                                <input
-                                  id="input-name"
-                                  class="
-                                    form-control form-control-alternative
-                                    input
-                                  "
-                                  type="text"
+
+                                <select
+                                  #mySelect
                                   formControlName="country"
-                                />
+                                  class="form-select second-font"
+                                >
+                                  <option
+                                    value=""
+                                    class="second-font"
+                                    selected
+                                    disabled
+                                    hidden
+                                  >
+                                    País
+                                  </option>
+                                  <option value="1" class="second-font">
+                                    Opcion 1
+                                  </option>
+                                  <option value="2" class="second-font">
+                                    Opcion 2
+                                  </option>
+                                </select>
                               </div>
                               <div class="mb-3">
                                 <label class="form-control-label second-font"
