@@ -7,28 +7,26 @@
             <div>
               <div class="d-flex">
                 <a><img src="assets/unisimon/icons/ico-back.svg" /></a>
-                <h4 class="page-title text-green ml-4">Convenios</h4>
+                <h2 class="page-title text-green ml-4">Convenios</h2>
               </div>
 
               <div class="mx-5 my-2">
                 <div>
                   <form [formGroup]="getFormGroup">
-                    <mat-form-field class="select">
-                      <mat-select
-                        [(ngModel)]="selectedValue"
-                        class="second-font my-auto px-4"
-                        formControlName="partner"
-                        name="partner"
+                    <select
+                      #mySelect
+                      name="select"
+                      formControlName="partner"
+                      class="custom-select second-font"
+                    >
+                      <option
+                        *ngFor="let country of countryList"
+                        value="country.value"
+                        class="second-font"
                       >
-                        <mat-option
-                          *ngFor="let country of countryList"
-                          [value]="country.value"
-                          class="second-font"
-                        >
-                          {{ country.viewValue }}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
+                        {{ country.viewValue }}
+                      </option>
+                    </select>
                   </form>
                 </div>
                 <div class="row">
